@@ -2767,9 +2767,11 @@ meta_window_x11_client_message (MetaWindow *window,
       if (timestamp == 0)
         {
           /* Client using older EWMH _NET_ACTIVE_WINDOW without a timestamp */
+          /*
           meta_warning ("Buggy client sent a _NET_ACTIVE_WINDOW message with a "
                         "timestamp of 0 for %s\n",
                         window->desc);
+          */
           timestamp = meta_display_get_current_time (display);
         }
 
